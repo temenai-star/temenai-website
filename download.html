@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download & Install TemenAI — Eclipse &amp; Design Studio AI Assistant</title>
+  <meta name="description"
+    content="Download the TemenAI plugin zip and read the step-by-step guide to install the AI Coding Assistant into your Eclipse or Design Studio dropins directory.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Ambient glowing background shapes -->
+  <div class="bg-ambient-glow"></div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 32 32">
+          <defs>
+            <linearGradient id="t-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3b82f6" />
+              <stop offset="100%" stop-color="#1e40af" />
+            </linearGradient>
+            <linearGradient id="ai-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00f2fe" />
+              <stop offset="100%" stop-color="#9d4edd" />
+            </linearGradient>
+          </defs>
+          <path d="M4 8 h16 l2 2 v2 h-8 v16 h-4 v-16 h-6 z" fill="url(#t-grad)" />
+          <path class="ai-sparkle" d="M23 4 Q23 12 31 12 Q23 12 23 20 Q23 12 15 12 Q23 12 23 4 Z" fill="url(#ai-grad)" />
+          <path class="ai-sparkle-small" d="M26 18 Q26 22 30 22 Q26 22 26 26 Q26 22 22 22 Q26 22 26 18 Z" fill="url(#ai-grad)" />
+        </svg>
+        <span class="logo-brand">Temen<span class="logo-ai">AI</span></span>
+      </a>
+
+      <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="index.html#llm-announcement">TemenAI LLM</a></li>
+        <li><a href="eula.html">EULA</a></li>
+        <li><a href="download.html" class="nav-btn">Download</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Download Container Section -->
+  <main class="container">
+    <section class="download-hero">
+      <div class="badge">Installation Hub</div>
+      <h1>Get Started with TemenAI</h1>
+      <p>Download the plug-in zip archive and follow the easy dropins-based installation instructions below to activate
+        your developer AI assistant in minutes.</p>
+    </section>
+
+    <div class="download-panel">
+      <!-- Download Box -->
+      <div class="download-card">
+        <div class="download-icon-big">
+          <svg width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+          </svg>
+        </div>
+        <h3>TemenAI Plugin</h3>
+        <p class="download-meta">File: temenai-assistant-1.0.0.zip | Size: ~2 MB</p>
+
+        <a href="temenai-assistant-1.0.0.zip" class="btn btn-primary" download>
+          Download Plugin .ZIP
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+        </a>
+
+        <div class="license-notice">
+          By downloading, you agree to our <a href="eula.html">End User License Agreement</a>. Free for personal use.
+          Banks and corporates require commercial licensing.
+        </div>
+      </div>
+
+      <!-- Installation Instructions -->
+      <div class="instructions-card">
+        <h2>Eclipse &amp; Design Studio Installation Guide</h2>
+        <div class="timeline">
+
+          <div class="timeline-step">
+            <div class="step-number">1</div>
+            <div class="step-title">Download and Extract</div>
+            <div class="step-desc">
+              Click the download button to grab the <span class="code-inline">temenai-assistant-1.0.0.zip</span> file.
+              Extract the archive file on your local machine to obtain the plug-in JAR files.
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-number">2</div>
+            <div class="step-title">Locate Installation Folder (Eclipse or Design Studio)</div>
+            <div class="step-desc">
+              Navigate to your Eclipse or Design Studio installation directory on your system. Find the <span
+                class="code-inline">dropins/</span> folder, and look for or create a nested <span
+                class="code-inline">plugins/</span> subdirectory (i.e. <span
+                class="code-inline">dropins/plugins/</span>).
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-number">3</div>
+            <div class="step-title">Copy Files to dropins/plugins/</div>
+            <div class="step-desc">
+              Copy the extracted JAR file (e.g. <span class="code-inline">com.ai.assistant.plugin_1.0.0.jar</span>) and
+              paste it directly into the <span class="code-inline">dropins/plugins/</span> folder.
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-number">4</div>
+            <div class="step-title">Restart the IDE</div>
+            <div class="step-desc">
+              If Eclipse or Design Studio is currently running, close it and start it up again. During boot, the IDE
+              will scan the <span class="code-inline">dropins/</span> directory and load the TemenAI plugin
+              automatically.
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-number">5</div>
+            <div class="step-title">Configure AI Settings</div>
+            <div class="step-desc">
+              Go to <span class="code-inline">Window &rarr; Preferences &rarr; TemenAI Assistant</span> to select your
+              protocol engine: OpenAI Compatible, Anthropic Claude, or local endpoints. Save your keys or Local URL.
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="step-number">6</div>
+            <div class="step-title">Start Coding!</div>
+            <div class="step-desc">
+              Press <span class="code-inline">Ctrl+Alt+A</span> inside any text editor to trigger inline completions, or
+              open the chat view under <span class="code-inline">Window &rarr; Show View &rarr; Other &rarr; AI
+                Assistant &rarr; TemenAI Assistant</span>.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Legal Disclaimer Banner -->
+  <section class="disclaimer-section">
+    <div class="container disclaimer-wrapper">
+      <div class="disclaimer-icon">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+      </div>
+      <div class="disclaimer-content">
+        <h4>Important Project Disclaimer</h4>
+        <p>
+          TemenAI is an independent community project and has no affiliation with, authorization from, sponsorship by,
+          or official connection with Temenos. Temenos does not support, maintain, or have any relation to this project.
+          All product names, trademarks, and registered trademarks are the property of their respective owners.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>Temen<span class="logo-ai">AI</span></h3>
+        <p>Empowering Eclipse and Design Studio developers with state-of-the-art offline and online AI assistant
+          workflows.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#llm-announcement">TemenAI LLM</a></li>
+          <li><a href="download.html">Download Plugin</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="eula.html">License Agreement (EULA)</a></li>
+          <li><a href="eula.html#corporate-licensing">Corporate Licenses</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 TemenAI.com. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <span style="color: var(--text-muted);">Independent Community Plugin</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for navbar hamburger toggle on mobile -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    if (mobileMenuBtn && navLinks) {
+      mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('open');
+      });
+    }
+  </script>
+</body>
+
+</html>

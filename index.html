@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TemenAI — Premium AI Assistant for Eclipse &amp; Design Studio</title>
+  <meta name="description"
+    content="Supercharge your development in Eclipse or Design Studio with TemenAI, the professional AI coding assistant. Get inline code completion, side chat sidebar, and support for local or cloud LLMs.">
+  <meta name="keywords"
+    content="Eclipse plugin, Design Studio plugin, AI coding assistant, inline completion, local LLM, Anthropic Claude, OpenAI, TemenAI">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Ambient glowing background shapes -->
+  <div class="bg-ambient-glow"></div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 32 32">
+          <defs>
+            <linearGradient id="t-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#3b82f6" />
+              <stop offset="100%" stop-color="#1e40af" />
+            </linearGradient>
+            <linearGradient id="ai-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00f2fe" />
+              <stop offset="100%" stop-color="#9d4edd" />
+            </linearGradient>
+          </defs>
+          <path d="M4 8 h16 l2 2 v2 h-8 v16 h-4 v-16 h-6 z" fill="url(#t-grad)" />
+          <path class="ai-sparkle" d="M23 4 Q23 12 31 12 Q23 12 23 20 Q23 12 15 12 Q23 12 23 4 Z" fill="url(#ai-grad)" />
+          <path class="ai-sparkle-small" d="M26 18 Q26 22 30 22 Q26 22 26 26 Q26 22 22 22 Q26 22 26 18 Z" fill="url(#ai-grad)" />
+        </svg>
+        <span class="logo-brand">Temen<span class="logo-ai">AI</span></span>
+      </a>
+
+      <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#llm-announcement">TemenAI LLM</a></li>
+        <li><a href="eula.html">EULA</a></li>
+        <li><a href="download.html" class="nav-btn">Download</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero container">
+    <h1>The Ultimate AI Assistant for <br><span>Eclipse &amp; Design Studio</span></h1>
+    <p class="hero-subtitle">
+      Bring the power of modern LLMs directly into your workspace. Get lightning-fast inline code suggestions, an
+      interactive sidebar chat, and flexible engine routing—fully compatible with Eclipse IDE and Design Studio
+      environments.
+    </p>
+    <div class="hero-actions">
+      <a href="download.html" class="btn btn-primary">
+        Get Plugin
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+      </a>
+      <a href="eula.html" class="btn btn-secondary">Read EULA</a>
+    </div>
+
+    <!-- Hero Mockup Display -->
+    <div class="showroom">
+      <div class="mockup-window">
+        <div class="mockup-header">
+          <div class="mockup-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <div class="mockup-title">V.VAL.CREDIT.LIMIT.b</div>
+        </div>
+        <div class="mockup-content">
+          <div class="code-mockup">
+            <div class="code-line"><span class="c-kw">SUBROUTINE</span> V.VAL.CREDIT.LIMIT</div>
+            <div class="code-line"><span
+                class="c-cm">*-----------------------------------------------------------------------------</span></div>
+            <div class="code-line"><span class="c-cm">* InfoBasic validation routine - Press Ctrl+Alt+A to generate code
+                inline</span></div>
+            <div class="code-line"><span
+                class="c-cm">*-----------------------------------------------------------------------------</span></div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-kw">$INSERT</span> I_COMMON</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-kw">$INSERT</span> I_EQUATE</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-kw">$INSERT</span> I_F.CUSTOMER</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;FN.CUSTOMER = <span class="c-st">'F.CUSTOMER'</span></div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;F.CUSTOMER = <span class="c-st">''</span></div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-kw">CALL</span> <span
+                class="c-fn">OPF</span>(FN.CUSTOMER, F.CUSTOMER)</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;CUSTOMER.ID = COMI</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;R.CUSTOMER = <span class="c-st">''</span>; Y.ERR = <span
+                class="c-st">''</span></div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-kw">CALL</span> <span
+                class="c-fn">F.READ</span>(FN.CUSTOMER, CUSTOMER.ID, R.CUSTOMER, F.CUSTOMER, Y.ERR)</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-cm">* Check if customer's credit limit is
+                exceeded</span></div>
+            <div class="code-line-ai">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-ai">IF
+                R.CUSTOMER&lt;EB.CUS.CREDIT.LIMIT&gt; GT 50000 THEN</span></div>
+            <div class="code-line-ai">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-ai">AF =
+                EB.CUS.CREDIT.LIMIT</span></div>
+            <div class="code-line-ai">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-ai">ETEXT =
+                "EB-CREDIT.LIMIT.EXCEEDED"</span></div>
+            <div class="code-line-ai">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-ai">CALL
+                STORE.END.ERROR</span></div>
+            <div class="code-line-ai">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-ai">END</span></div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-kw">RETURN</span></div>
+            <div class="code-line"><span class="c-kw">END</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid Section -->
+  <section class="features container" id="features">
+    <div class="section-header">
+      <h2>Advanced Features</h2>
+      <p>Built specifically to provide deep integration and elite coding efficiency directly inside Eclipse and
+        compatible Design Studio ecosystems.</p>
+    </div>
+
+    <div class="feature-grid">
+      <!-- Feature 1 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <h3>Inline Generation</h3>
+        <p>Use the hotkey <span class="code-inline">Ctrl+Alt+A</span> anywhere in your editor to trigger instant,
+          context-aware completions. Results stream in real-time, right where your cursor is.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+        </div>
+        <h3>AI Chat Sidebar</h3>
+        <p>Open a fully integrated side-panel chat window to query your codebase, explain logic, run unit test
+          generations, and display highlighted code answers using Prism.js formatting.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <h3>Custom LLM Routing</h3>
+        <p>Switch protocols dynamically. Connect to OpenAI APIs, Anthropic Claude, or run completely offline using local
+          architectures like Ollama, LocalAI, or vLLM server installations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TemenAI LLM Announcement Section -->
+  <section class="announcement-section container" id="llm-announcement">
+    <div class="announcement-box">
+      <div class="announcement-badge">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"
+          style="margin-right: 4px;">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+        </svg>
+        Coming Soon
+      </div>
+      <h2>Fine-Tuned Custom TemenAI LLM</h2>
+      <p>
+        We are thrilled to announce the upcoming <strong>TemenAI Large Language Model</strong>—a purpose-built AI
+        fine-tuned specifically for <strong>InfoBasic</strong> and <strong>Java</strong> programming. Designed to be
+        hosted locally on-premise within banks and financial institutions, the TemenAI LLM ensures that your code and
+        data never leave your network. No cloud dependency, no external calls—just fast, private, and accurate
+        completions.
+      </p>
+      <div class="announcement-features">
+        <div class="announcement-feat-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          Bank-Grade Security
+        </div>
+        <div class="announcement-feat-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 9.172V5L8 4z" />
+          </svg>
+          InfoBasic &amp; Java Expertise
+        </div>
+        <div class="announcement-feat-item">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          On-Premise Local Hosting
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal Disclaimer Banner -->
+  <section class="disclaimer-section">
+    <div class="container disclaimer-wrapper">
+      <div class="disclaimer-icon">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+        </svg>
+      </div>
+      <div class="disclaimer-content">
+        <h4>Important Project Disclaimer</h4>
+        <p>
+          TemenAI is an independent community project and has no affiliation with, authorization from, sponsorship by,
+          or official connection with Temenos. Temenos does not support, maintain, or have any relation to this project.
+          All product names, trademarks, and registered trademarks are the property of their respective owners.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>Temen<span class="logo-ai">AI</span></h3>
+        <p>Empowering Eclipse and Design Studio developers with state-of-the-art offline and online AI assistant
+          workflows.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#llm-announcement">TemenAI LLM</a></li>
+          <li><a href="download.html">Download Plugin</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="eula.html">License Agreement (EULA)</a></li>
+          <li><a href="eula.html#corporate-licensing">Corporate Licenses</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 TemenAI.com. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <span style="color: var(--text-muted);">Independent Community Plugin</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for navbar hamburger toggle on mobile -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    if (mobileMenuBtn && navLinks) {
+      mobileMenuBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        mobileMenuBtn.classList.toggle('open');
+      });
+
+      // Close menu if a link is clicked
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('active');
+          mobileMenuBtn.classList.remove('open');
+        });
+      });
+    }
+  </script>
+</body>
+
+</html>
